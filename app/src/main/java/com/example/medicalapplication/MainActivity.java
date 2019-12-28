@@ -21,20 +21,20 @@ private ImageView iv;
         Animation myanim= AnimationUtils.loadAnimation(this,R.anim.mytransition);
         tv.startAnimation(myanim);
         iv.startAnimation(myanim);
-//        Intent i=new Intent(this,---);
-//        Thread timer=new Thread(){
-//            public void run(){
-//                try{
-//                    sleep(5000);
-//                }
-//                catch (InterruptedException e){
-//                    e.printStackTrace();
-//                }
-//                finally {
-//                    startActivity(i);
-//                }
-//            }
-//        };
-//        timer.start();
+        final Intent i=new Intent(this,LoginActivity.class);
+        Thread timer=new Thread(){
+            public void run(){
+                try{
+                    sleep(5000);
+                }
+                catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                finally {
+                    startActivity(i);
+                }
+            }
+        };
+        timer.start();
     }
 }
